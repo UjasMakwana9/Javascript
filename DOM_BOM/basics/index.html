@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: aliceblue;
+            text-align: center;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: 400;
+            color:#1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Javascript DOM Examples
+    </h1>
+    <section id="exam-1">
+        <p id="para1">This is text you want to change </p>
+        <label for="input">Value:</label>
+        <input type="text" onfocus="this.value=''" name="textvalue" id="textvalue">
+        <button id="changeText">Change Text</button>
+    </section>
+    
+    <section id="exam-2">
+        <p>Traversing the DOM</p>
+            <ul id="cities">
+                <li>Amreli</li>
+                <li>Porbandar</li>
+                <li>Jamnagar</li>
+                <li>Savarkundla</li>
+            </ul>
+            <button id="highlightFirstCity">
+                highlight
+            </button>
+    </section>
+
+    <section id="exam-3">
+        <p>Manipulating the DOM element</p>
+        <div id="coffee">
+            Order:
+            <span id="coffeeType">
+                Lattee
+            </span>
+        </div>
+        <button id="changecoffeeType">Change Order</button>
+    </section>
+    
+    <section id="exam=4">
+        <p>Creating and inserting new element</p>
+        <button id="additem">Add Item</button>
+        
+        <ul id="shoppinglist">
+            <li>Bread</li>
+            <li>Milk</li>
+        </ul>
+        
+    </section>
+    <section id="exam-5">
+        <p>Deleting a element</p>
+        
+        <ul id="tasklist">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+        <button id="delete">Delete Order</button>
+        
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
