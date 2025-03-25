@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<script>
+    let timeOut = null
+    function debouncing(){
+       
+            clearTimeout(timeOut)
+        
+        timeOut = setTimeout(function() {
+            addNumber()
+        }, 1000);
+    }
+    function addNumber(){
+        const num1 = parseFloat(document.getElementById("first").value)
+        const num2 = parseFloat(document.getElementById("second").value)
+
+        fetch("http://localhost:3000/sum?a=" + num1 + "&b=" + num2)
+        .then(function(response){
+            return response.text()
+        })
+        .then(function(ans){
+            console.log(ans);
+            document.getElementById("answer").innerHTML = ans
+        })
+    }
+</script>
+<body>
+    <input oninput="debouncing()" type="text" id="first">
+    <br>
+    <input oninput="debouncing()" type="text" id="second">
+    <br>
+    <p id="answer"></p>
+</body>
+</html>
